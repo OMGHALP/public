@@ -1,0 +1,14 @@
+
+button {
+background:    #3e3dc6;
+background:    -webkit-linear-gradient(#3e3dc6, #00ffff);
+background:    linear-gradient(#3e3dc6, #00ffff);
+border:        4px solid #556699;
+border-radius: 1000px;
+padding:       8px 20px;
+color:         #ffffff;
+display:       inline-block;
+font:          normal 700 24px/1 "Roboto", sans-serif;
+text-align:    center;
+text-shadow:   2px 2px #000000;
+}
