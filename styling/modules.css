@@ -31,6 +31,13 @@ img {
     height: auto;
 }
 
+.textbox {
+background-color: white;
+color: black;
+text-size-adjust: 
+}
+
+
 /*This is for tablets*/
 @media only screen and (min-width: 768px) {
     
