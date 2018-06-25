@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 
@@ -10,31 +11,46 @@
     <link rel="stylesheet" type="text/css" href="styling/reset.css" />
     <link rel="stylesheet" type="text/css" href="styling/base.css" />
     <link rel="stylesheet" type="text/css" href="styling/layout.css" />
-    <!-- <link rel="stylesheet" type="text/css" href="styling/modules.css" /> -->
+    <link rel="stylesheet" type="text/css" href="styling/modules.css" />
 </head>
+
 <body>
     <nav>
-            <button id='getHelp'>OMG!!1!1!!  PLS HALP</button>
-            <button id='provideHelp'>I'm here to help</button>
-            <button id='about'>About Us</button>
+        <button id='getHelp'>OMG HALP</button>
+        <button id='provideHelp'>I'm here to help</button>
+        <button id='about'>About Us</button>
     </nav>
 
     <!-- New Problem -->
-    <section id= newProblem>
-        <img id=`animal` url=`${image_url}` />
+    <section id="newProblem">
+        <img id="animal" />
         <form>
-            <textarea id="problem?" rows="40" cols ="50">
+            <textarea class="textbox" id="problem?" rows="15" cols="92">
                 My Problem is:
-
-                What I expected to see is:
-
-                What I actually got is:
-
-                What might be causing this is:
-
-                My Codez are:
             </textarea>
-            <button id=`submit`>HALP</button>
+
+            <textarea class="textbox" id="expectation" rows="15" cols="92">
+                 What I expected to see is:
+            </textarea>
+
+            <textarea class="textbox" id="result" rows="15" cols="92">
+                What I actually got is:
+            </textarea>
+
+            <textarea class="textbox" id="bestGuess" rows="15" cols="92">
+                What I think might be the issue is:
+            </textarea>
+
+
+            <textarea class="textbox" id="daCodez" rows="15" cols="92">
+                My code is:
+            </textarea>
+
+
+            <label for 'tagz'>Tags (5 max)</label>
+            <input type="text" , name='tagz' , size=50 />
+
+            <button id="submit">HALP</button>
         </form>
     </section>
 
@@ -46,7 +62,7 @@
     <!-- Submit a New Solution -->
     <section id=solveAProblem>
         <h2>Solve a Problem!</h2>
-    <textarea "id=reply" rows="40" cols ="50">
+        <textarea class="textbox" id="reply" rows="15" cols="92">
             What's causing your problem is:
 
             Your fixed code might look like:
@@ -56,13 +72,22 @@
     </section>
 
     <!-- About Us -->
+    <section>
         <h2>About Us</h2>
 
+    </section>
+
+
+    <!-- J query -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Handlebars -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+
+    <!-- Routes -->
+    <script src="scripts/routes.js"></script>
+    <script src="scripts/index.js"></script>
+
 </body>
+
 </html>
-
-
-
-
-
-
