@@ -12,3 +12,27 @@ font:          normal 700 24px/1 "Roboto", sans-serif;
 text-align:    center;
 text-shadow:   2px 2px #000000;
 }
+
+button:hover {
+    background: blue;
+    color: white;
+}
+
+button browseProblems {
+    display: block;
+    margin: auto;
+    text-align: center;
+    padding-top: 65px;
+    font-size: 35px;
+}
+
+/*This is for tablets*/
+@media only screen and (min-width: 768px) {
+    
+}
+
+/*This is for smartphones*/
+
+@media only screen and (min-width: 320px) and (max-width: 480px){
+    
+}

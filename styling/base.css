@@ -2,3 +2,20 @@ body {
     background-color:white;
     color: black;
 }
+
+nav {
+overflow: hidden;
+background-color: #ffffff;
+padding: 20px 10px; 
+}
+
+/*This is for tablets*/
+@media only screen and (min-width: 768px) {
+    
+}
+
+/*This is for smartphones*/
+
+@media only screen and (min-width: 320px) and (max-width: 480px){
+    
+}
