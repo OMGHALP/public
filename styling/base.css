@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 body {
     background-color:white;
     color: black;
@@ -17,5 +21,9 @@ padding: 20px 10px;
 /*This is for smartphones*/
 
 @media only screen and (min-width: 320px) and (max-width: 480px){
-    
+    nav {
+        overflow: hidden;
+        background-color: #ffffff;
+        padding: 20px 10px; 
+        } 
 }
