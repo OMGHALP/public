@@ -14,7 +14,7 @@ text-shadow:   2px 2px #000000;
 }
 
 button:hover {
-    background: blue;
+    background: #556699;
     color: white;
 }
 
@@ -27,24 +27,33 @@ button browseProblems {
 }
 
 img {
-    width: 100%;
+    width: 50%;
     height: auto;
-}
-
-.textbox {
-background-color: white;
-color: black;
-text-size-adjust: 
+    width: auto;
+    margin-left: 25%;
+    margin-right: 25%;
 }
 
 
 /*This is for tablets*/
 @media only screen and (min-width: 768px) {
-    
+    img {
+        /* width: 50%; */
+        height: auto;
+        width: auto;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
 }
 
 /*This is for smartphones*/
 
 @media only screen and (min-width: 320px) and (max-width: 480px){
-    
+    img {
+        /* width: 50%; */
+        height: auto;
+        width: auto;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
 }
