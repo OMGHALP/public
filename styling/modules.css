@@ -1,9 +1,7 @@
 
 button {
-background:    #3e3dc6;
-background:    -webkit-linear-gradient(#3e3dc6, #00ffff);
-background:    linear-gradient(#3e3dc6, #00ffff);
-border:        2px solid #556699;
+background:    #617ed7;
+border:        2px solid #617ed7;
 border-radius: 1000px;
 padding:       8px 20px;
 color:         #ffffff;
@@ -14,7 +12,7 @@ text-shadow:   2px 2px #000000;
 }
 
 button:hover {
-    background: #556699;
+    background: #0f1e4a;
     color: white;
 }
 
@@ -27,11 +25,12 @@ button browseProblems {
 }
 
 img {
-    height: auto;
-    width: auto;
-    margin-left: 25%;
-    margin-right: 25%;
-    padding-top: 5%;
+    display: block;
+    width: 450px;
+    height: 450px;
+    object-position: 50% 50;
+    /* margin-left: 25%; */
+    padding-bottom: 40px;
 }
 
 #tags {
@@ -52,12 +51,14 @@ img {
 
 
 /*This is for tablets*/
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
     img {
-        padding-top: 20px;
-        padding-bottom: 10px;
-        height: auto;
-        width: auto;
+        display: block;
+        height: 50%;
+        object-fit: cover;
+        object-position: 50% 0;
+        width: 50%;
+        padding-bottom: 30px;
     }
 }
 
@@ -65,9 +66,11 @@ img {
 
 @media only screen and (min-width: 320px) and (max-width: 480px){
     img {
-        padding-top: 2px;
-        padding-bottom: 5px;
-        height: auto;
-        width: auto;
+        display: block;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 0;
+        width: 100%;
+        padding-bottom: 10px;
     }
 }
