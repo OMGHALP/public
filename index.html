@@ -30,25 +30,26 @@
             <textarea class="textbox" id="problem" rows="15" cols="92">
             </textarea>
 
-            <textarea class="textbox" id="expectation" rows="15" cols="92">
-                 What I expected to see is:
+            <textarea required class="textbox" id="expectation" rows="15" cols="92" wrap="hard" placeholder="Describe your problem">
+            What I expected to see is:
             </textarea>
 
-            <textarea class="textbox" id="result" rows="15" cols="92">
-                What I actually got is:
+            <textarea required class="textbox" id="result" rows="15" cols="92" wrap="hard" placeholder="Describe your problem">
+            What I actually got is:
             </textarea>
 
-            <textarea class="textbox" id="bestGuess" rows="15" cols="92">
-                What I think might be the issue is:
-            </textarea>
-
-
-            <textarea class="textbox" id="daCodez" rows="15" cols="92">
-                My code is:
+            <textarea required class="textbox" id="bestGuess" rows="15" cols="92" wrap="hard" placeholder="Describe your problem">
+            What I think might be the issue is:
             </textarea>
 
 
-            <label for 'tagz'>Please seperate your tags with , (5 max)</label>
+            <textarea required class="textbox" id="daCodez" rows="15" cols="92" wrap="hard" placeholder="Describe your problem">
+            My code is:
+            </textarea>
+
+
+            <label for 'tagz'>Use commas to seperate tags (5 max)</label>
+
             <input type="text" , name='tagz' , size=50 />
 
             <button id="submit">HALP</button>
@@ -64,11 +65,13 @@
     <section id=solveAProblem>
         <h2>Solve a Problem!</h2>
         <textarea class="textbox" id="reply" rows="15" cols="92">
-            What's causing your problem is:
 
-            Your fixed code might look like:
+        What's causing your problem is:
 
-            I need more information to help you.  The specific things I want to know are:
+
+        Your fixed code might look like:
+
+        I need more information to help you.  The specific things I want to know are:
      </textarea>
     </section>
 
@@ -81,6 +84,9 @@
     <footer>&copy;2018 OMG HALP Team. All Rights Reserved</footer>
 
 
+    <footer>&copy;2018 OMG HALP Team. All Rights Reserved</footer>
+
+
     <!-- J query -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -88,6 +94,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
 
     <!-- Routes -->
+
     <script src="scripts/index.js"></script>
     <script src="scripts/routes.js"></script>
 

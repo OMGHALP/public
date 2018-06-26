@@ -10,7 +10,6 @@ function Problem(problemobj) {
     this.tagz = problemobj.tagz
 }
 
-
 Problem.all = [];
 Problem.one = {};
 
