@@ -22,6 +22,7 @@ footer {
     text-align:center;
     position: fixed;
     bottom: 0;
+    display:block;
     width:100%;
     height:20px;
     background: black;
@@ -29,8 +30,9 @@ footer {
 }
 
 footer:hover {
-    background: blue;
+    background: darkblue;
     color:black;
+    font-weight: bold;
 }
 
 /*This is for tablets*/

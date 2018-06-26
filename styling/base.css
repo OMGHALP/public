@@ -17,15 +17,19 @@ align-items: center;
 /*This is for tablets*/
 @media only screen and (min-width: 768px) {
  
-    
+    nav {
+        width:100%;
+        display:block;
+    }
+
     nav.button-collapse {
-        overflow: hidden;
+        /* overflow: hidden; */
         position: auto;
-        display: block;
+        display: inline-block;
         background-color: #ffffff;
         padding-top: 15px;
-        float: clear;
         width: 100%;
+        height: 5%;
         align-items: center;
         }
     
@@ -34,14 +38,20 @@ align-items: center;
 /*This is for smartphones*/
 
 @media only screen and (min-width: 320px) and (max-width: 480px){
+    
+    nav {
+        width:100%;
+        display:block;
+    }
+    
     nav.button-collapse {
         overflow: hidden;
         position: auto;
-        display: block;
+        display: inline-block;
         background-color: #ffffff;
         padding-top: 5px;
         width: 100%;
-        height: 20%;
+        height: 5%;
         align-items: center;
         }
 }

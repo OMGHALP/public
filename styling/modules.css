@@ -18,7 +18,7 @@ button:hover {
     color: white;
 }
 
-button browseProblems {
+button  {
     display: block;
     margin: auto;
     text-align: center;
@@ -27,22 +27,37 @@ button browseProblems {
 }
 
 img {
-    width: 50%;
     height: auto;
     width: auto;
     margin-left: 25%;
     margin-right: 25%;
+    padding-top: 5%;
+}
+
+#tags {
+    display: block;
+}
+
+#submit {
+    display: block;
+}
+
+#browseProblems {
+    display: block;
+}
+
+#solveAProblem {
+    display: block;
 }
 
 
 /*This is for tablets*/
 @media only screen and (min-width: 768px) {
     img {
-        /* width: 50%; */
+        padding-top: 20px;
+        padding-bottom: 10px;
         height: auto;
         width: auto;
-        margin-left: 5%;
-        margin-right: 5%;
     }
 }
 
@@ -50,10 +65,9 @@ img {
 
 @media only screen and (min-width: 320px) and (max-width: 480px){
     img {
-        /* width: 50%; */
+        padding-top: 2px;
+        padding-bottom: 5px;
         height: auto;
         width: auto;
-        margin-left: 5%;
-        margin-right: 5%;
     }
 }
