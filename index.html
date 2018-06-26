@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="styling/layout.css" />
     <link rel="stylesheet" type="text/css" href="styling/modules.css" />
 
-    <problem class="clearfix" id="{{i}}" data-problem="{{problem}}" data-theCode="{{theCode}}" data-result="{{result}}"
+    <problem class="clearfix" data-problem="{{problem}}" data-theCode="{{theCode}}" data-result="{{result}}"
     data-expectation="{{expectation}}"  data-bestGuess="{{bestGuess}" >
     <script id="problem-template" type="text/x-handlebars-template">
           <header>
@@ -25,6 +25,8 @@
               <h2>Best Guess: {{bestGuess}}</h2>
             </div>
             <button class= "solution" id='solve'>Solve It!</button>
+            <button class= "stackO" id='stackoverflow'>Solve It!</button>
+            <button class= "homePage" id='home'>Back to Homepage</button>
           </header>
         </problem>
       </script>
@@ -32,9 +34,9 @@
 <!-- <address><a href="{{author_url}}">{{author}}</a></address> -->
 <body>
     <nav>
-        <button id='getHelp'>OMG HALP</button>
-        <button id='provideHelp'>Here to help</button>
-        <button id='about'>About Us</button>
+        <button class="topnav" id='getHelp'>OMG HALP</button>
+        <button class="topnav"id='provideHelp'>Here to help</button>
+        <button class="topnav"id='about'>About Us</button>
     </nav>
 
     <!-- New Problem -->
@@ -55,7 +57,7 @@
 
 
             <label for 'tagz' id="tags">Use commas to seperate tags (5 max)</label>
-            <input type="text" , name='tagz' , size=50 />
+            <input id="tags" type="text" size=50 />
 
             <button id="submit">HALP</button>
         </form>

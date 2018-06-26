@@ -1,14 +1,16 @@
 
 button {
 background:    #617ed7;
-border:        2px solid #617ed7;
+border:        4px solid #617ed7;
 border-radius: 1000px;
-padding:       8px 20px;
+padding:       2px 8px;
 color:         #ffffff;
 display:       inline-block;
-font:          normal 700 24px/1 "Roboto", sans-serif;
+font:          normal 4vw "Roboto", sans-serif;
 text-align:    center;
-text-shadow:   2px 2px #000000;
+text-shadow:   1vw 1pvw #000000;
+margin-top: 5px;
+margin-bottom: 5px;
 }
 
 button:hover {
@@ -16,12 +18,21 @@ button:hover {
     color: white;
 }
 
-button browseProblems {
+#submit {
+    text-align: center;
+    align-content: center;
     display: block;
+    object-position: 50% 50;
+    float: center;
+}
+
+#browseProblems {
+    display: inline;
     margin: auto;
     text-align: center;
     padding-top: 65px;
     font-size: 35px;
+    align-content: center;
 }
 
 img {
@@ -29,7 +40,9 @@ img {
     width: 450px;
     height: 450px;
     object-position: 50% 50;
-    /* margin-left: 25%; */
+    align-content: center;
+    text-align: center;
+    margin-left: 25%;
     padding-bottom: 40px;
 }
 
@@ -55,8 +68,8 @@ img {
     img {
         display: block;
         height: 50%;
-        object-fit: cover;
         object-position: 50% 0;
+        text-align: center;
         width: 50%;
         padding-bottom: 30px;
     }
@@ -64,13 +77,14 @@ img {
 
 /*This is for smartphones*/
 
-@media only screen and (min-width: 320px) and (max-width: 480px){
+@media only screen and (min-width: 120px) and (max-width: 450px){
     img {
         display: block;
-        height: 100%;
-        object-fit: cover;
+        height: 70%;
+        text-align: center;
         object-position: 50% 0;
         width: 100%;
+        margin: 0;
         padding-bottom: 10px;
     }
 }

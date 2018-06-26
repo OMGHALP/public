@@ -19,11 +19,12 @@ padding-bottom: 2%;
 
 
 footer {
-    position: fixed;
+    position: relative;
+    width: 100%;
     right: 0;
     bottom: 0;
     left: 0;
-    padding-top: 2rem;
+    margin-top: 40px;
     padding: 1rem;
     background-color: #efefef;
     text-align: center;
@@ -58,11 +59,12 @@ footer:hover {
         }
 
         footer {
-            position: fixed;
+            position: relative;
+            width: 100%;
             right: 0;
             bottom: 0;
             left: 0;
-            padding-top: 2rem;
+            margin-top: 50px;
             padding: 1rem;
             background-color: #efefef;
             text-align: center;
@@ -90,11 +92,12 @@ footer:hover {
        } 
 
        footer {
-        position: fixed;
+        position: relative;
+        width: 100%;
         right: 0;
         bottom: 0;
         left: 0;
-        padding-top: 2rem;
+        margin-top: 50px;
         padding: 1rem;
         background-color: #efefef;
         text-align: center;
