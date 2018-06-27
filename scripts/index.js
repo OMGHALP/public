@@ -13,17 +13,6 @@ function Problem(problemobj) {
         this.tag = problemobj.tag
 }
 
-// function Problem(problemobj) {
-//     this.question = problemobj.problem
-//     this.tag = problemobj.tagz
-//     this.expectation = problemobj.expected
-//     this.result = problemobj.result
-//     this.best_guess = problemobj.bestGuess
-//     this.codes = problemobj.theCode
-// }
-
-
-
 Problem.all = [];
 Problem.one = {};
 
@@ -31,9 +20,8 @@ function initMainPage() {
     //  Hides the Sections for SPA Compliance
     $("section").hide();
     $('#animal').hide();
+ 
     // Hits the dog.ceo API, gets a random dog pic, and renders it to the page
-
-    //Comment In to re-enable AJAX call to see dogs
     $.ajax("https://dog.ceo/api/breeds/image/random")
         .then((results) => {
             $('#animal').attr('src', `${results.message}`);
@@ -48,29 +36,24 @@ $('#provideHelp').on('click', function () {
     $("#browseProblems").empty().append("<h2>Previously Submitted Problems</h2>");
     $("#browseProblems").show();
 
-    //Fetches the problems and loads them into Problem.all
+    //Fetches the problems and loads them into Problem.all  Then automatically calls hereToHelp once Problem.all is loaded with problem objects
     Problem.all = [];
     Problem.fetchAll(hereToHelp)
 })
 
 function hereToHelp() {
     Problem.all.forEach(prob => {
-        console.log(prob.toHtml())
         $('#browseProblems').append(prob.toHtml())
     })
 
     //turns on the event listeners to see what was clicked on.
-    eventListeners();
-
-}
-
-
-function eventListeners() {
-    $('problem').on('click', '$(.solution)', function (event) {
+    $('problem button').on('click', function (event) {
+        console.log($(this).parent()[0]);
         event.preventDefault();
         let prob = $(this).parent().find('*')
     })
-};
+}
+
 
 //User clicks on Get Help
 $('#getHelp').on('click', function () {
@@ -84,7 +67,6 @@ $('#getHelp').on('click', function () {
 //User clicks the PLZ HALP button
 $('#submit').on('click', function (event) {
     event.preventDefault();
-    console.log(`you're trying to submit.`)
     Problem.one = new Problem({
         question: $('#problem').val(),
         expectation: $('#expectation').val(),
@@ -95,7 +77,6 @@ $('#submit').on('click', function (event) {
     })
 
     Problem.one.insertRecord();
-    console.log('TEST')
     initProblemPosted();
 });
 
@@ -123,7 +104,6 @@ $(document).ready(initMainPage())
 Problem.loadAll = (array) => {
     array.forEach(element => {
         Problem.all.push(new Problem(element))
-        console.log(element)
     })
 }
 
