@@ -7,7 +7,7 @@ function Problem(problemobj) {
     this.expectation = problemobj.expected
     this.result = problemobj.result
     this.best_guess = problemobj.bestGuess
-    this.code = problemobj.theCode
+    this.codes = problemobj.theCode
     this.result = problemobj.result
 }
 
@@ -29,7 +29,6 @@ function initMainPage() {
 
 $('#provideHelp').on('click', function () {
     //  User Clicks I'm Here to Help
-
     // SPA
     $("section").hide();
     $("#animal").hide();
@@ -38,21 +37,25 @@ $('#provideHelp').on('click', function () {
 
     //Fetches the problems and loads them into Problem.all
     Problem.all = [];
-    Problem.fetchAll();
+    Problem.fetchAll(hereToHelp)
+})
 
-    Problem.all.forEach(prob => $('#browseProblems').append(prob.toHtml()));
+function hereToHelp() {
+    Problem.all.forEach(prob => {
+        console.log(prob.toHtml())
+        $('#browseProblems').append(prob.toHtml())
+    })
 
     //turns on the event listeners to see what was clicked on.
     eventListeners();
+    
+}
 
-})
 
 function eventListeners() {
     $('problem').on('click', '$(.solution)', function (event) {
         event.preventDefault();
         let prob = $(this).parent().find('*')
-
-
     })
 };
 
@@ -92,7 +95,7 @@ function initProblemPosted() {
     $("#submitted").show();
 
 
-    $('#stack-overflow').on('click', function () {
+    $('#stackoverflow').on('click', function () {
         window.location.href = "https://stackoverflow.com/questions/ask"
     })
 
@@ -100,16 +103,6 @@ function initProblemPosted() {
         initMainPage();
     })
 }
-
-$('#provideHelp').on('click', function () {
-    //  SPA navigation
-    $("section").hide();
-    $("#animal").hide();
-    $('#browseProblems').show();
-
-
-});
-
 
 $(document).ready(initMainPage())
 
@@ -123,3 +116,4 @@ Problem.prototype.toHtml = function () {
     let template = Handlebars.compile($('#problem-template').text());
     return template(this);
 }
+

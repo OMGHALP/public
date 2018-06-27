@@ -16,17 +16,15 @@ Problem.prototype.insertRecord = function (callback) {
 Problem.fetchAll = callback => {
     $.get('http://127.0.0.1:3000/problem')
         .then(results => {
-            console.log(results)
             Problem.loadAll(results);
-            // callback();
+            callback();
         })
 };
 
-///
 Problem.solve = callback => {
     $.put('http://127.0.0.1:3000/solutions')
         .then(
-            //Stuff
+            console.log('trollololol')
         )
 }
 
