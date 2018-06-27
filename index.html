@@ -13,23 +13,46 @@
     <link rel="stylesheet" type="text/css" href="styling/layout.css" />
     <link rel="stylesheet" type="text/css" href="styling/modules.css" />
 
-    <problem class="clearfix" data-problem="{{problem}}" data-theCode="{{theCode}}" data-result="{{result}}"
-    data-expectation="{{expectation}}"  data-bestGuess="{{bestGuess}" >
-    <script id="problem-template" type="text/x-handlebars-template">
+<!--  <script id="book-list-template" type="text/x-handlebars-template">
+        <book class="clearfix" data-book="{{book}}">
           <header>
-            <h1>{{problem}}</h1>
+            <h2>{{title}}</h2>
+            <isbn>{{isbn}}</isbn>
             <div>
-              <h2>Code: {{theCode}}</h2>
-              <h2>Result: {{result}}</h2>
-              <h2>Expected: {{expectation}}</h2>
-              <h2>Best Guess: {{bestGuess}}</h2>
+              By {{author}}
             </div>
-            <button class= "solution" id='solve'>Solve It!</button>
-            <button class= "stackO" id='stackoverflow'>Solve It!</button>
-            <button class= "homePage" id='home'>Back to Homepage</button>
           </header>
+        <img src ={{image_url}} />
+        <article class="description">{{{description}}}</article>
+        </book>
+    </script>
+ -->
+
+    <script id="problem-template" type="text/x-handlebars-template">
+    <problem class="clearfix">
+            <h3>The Problem:</h3>
+            <p>{{question}}</p>
+            
+            <div class="body">
+              <h4>Code:</h4>
+              <p>{{code}}</p>
+
+              <h4>Expected Result:</h4> 
+              <p>{{expectation}}</p>
+
+              <h4>Actual Result:</h4>
+              <p>{{result}}</p>  
+              
+              <h2>Best Guess: {{best_guess}}</h2>
+            </div>
+
+            <button class= "solution" id='solve'>Solve It!</button>
+            <!-- <button class= "stackO" id='stackoverflow'>Solve It!</button>
+            <button class= "homePage" id='home'>Back to Homepage</button> -->
         </problem>
-      </script>
+    </script>
+
+
 </head>
 <!-- <address><a href="{{author_url}}">{{author}}</a></address> -->
 <body>
