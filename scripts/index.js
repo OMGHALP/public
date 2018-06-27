@@ -32,7 +32,8 @@ $('#provideHelp').on('click', function () {
 
     // SPA
     $("section").hide();
-    $("#browseProblems").empty();
+    $("#animal").hide();
+    $("#browseProblems").empty().append("<h2>Previously Submitted Problems</h2>");
     $("#browseProblems").show();
 
     //Fetches the problems and loads them into Problem.all
@@ -98,10 +99,7 @@ function initProblemPosted() {
     $('#home-page').on('click', function () {
         initMainPage();
     })
-
-
 }
-
 
 $('#provideHelp').on('click', function () {
     //  SPA navigation
@@ -113,17 +111,15 @@ $('#provideHelp').on('click', function () {
 });
 
 
-
-
-
 $(document).ready(initMainPage())
-
-
-
-
 
 ///   This stuff is from Problem Methods... which is currently not referenced in our HTML
 
 Problem.loadAll = (array) => {
     array.forEach(element => Problem.all.push(new Problem(element)))
+}
+
+Problem.prototype.toHtml = function () {
+    let template = Handlebars.compile($('#problem-template').text());
+    return template(this);
 }
