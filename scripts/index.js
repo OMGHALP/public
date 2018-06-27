@@ -18,7 +18,7 @@ function initMainPage() {
     $("section").hide();
 
     // Hits the dog.ceo API, gets a random dog pic, and renders it to the page
-    $.ajax("https://dog.ceo/api/breeds/image/random")
+    $.ajax("https:///api/breeds/image/random")
     .then((results) => {
         $('#animal').attr('src', `${results.message}`);
     })
