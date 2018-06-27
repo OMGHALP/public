@@ -2,12 +2,13 @@
 
 //  Constructor for New problems
 function Problem(problemobj) {
-    this.problem = problemobj.problem
-    this.expected = problemobj.expected
+    this.question = problemobj.problem
+    this.tag = problemobj.tagz
+    this.expectation = problemobj.expected
     this.result = problemobj.result
-    this.bestGuess = problemobj.bestGuess
-    this.theCode = problemobj.theCode
-    this.tagz = problemobj.tagz
+    this.best_guess = problemobj.bestGuess
+    this.code = problemobj.theCode
+    this.result = problemobj.result
 }
 
 Problem.all = [];
@@ -16,27 +17,48 @@ Problem.one = {};
 function initMainPage() {
     //  Hides the Sections for SPA Compliance
     $("section").hide();
-
+    $('#animal').hide();
     // Hits the dog.ceo API, gets a random dog pic, and renders it to the page
+
+    //Comment In to re-enable AJAX call to see dogs
     $.ajax("https://dog.ceo/api/breeds/image/random")
-    .then((results) => {
-        $('#animal').attr('src', `${results.message}`);
-    })
+        .then((results) => {
+            $('#animal').attr('src', `${results.message}`);
+        })
 }
 
-function initBrowsePage () {
+$('#provideHelp').on('click', function () {
+    //  User Clicks I'm Here to Help
+
     // SPA
     $("section").hide();
-    $("#browseProblems#").empty();
-    $("#browseProblems#").show();
+    $("#browseProblems").empty();
+    $("#browseProblems").show();
 
+    //Fetches the problems and loads them into Problem.all
+    Problem.all = [];
     Problem.fetchAll();
+
     Problem.all.forEach(prob => $('#browseProblems').append(prob.toHtml()));
-}
+
+    //turns on the event listeners to see what was clicked on.
+    eventListeners();
+
+})
+
+function eventListeners() {
+    $('problem').on('click', '$(.solution)', function (event) {
+        event.preventDefault();
+        let prob = $(this).parent().find('*')
+
+
+    })
+};
 
 //User clicks on Get Help
 $('#getHelp').on('click', function () {
     //  SPA navigation
+    // $('#newProblem').empty();
     $("section").hide();
     $('#newProblem').show();
     $("#animal").show();
@@ -46,17 +68,21 @@ $('#getHelp').on('click', function () {
 //User clicks the PLZ HALP button
 $('#submit').on('click', function (event) {
     event.preventDefault();
+    console.log(`you're trying to submit.`)
     Problem.one = new Problem({
-        problem: $('#problem').text(),
-        expected: $('#expectation').text(),
-        result: $('#result').text(),
-        bestGuess: $('#bestGuess').text(),
-        theCode: $('#daCodez').text(),
-        tagz: $('#tagz').text()
-    });
+        problem: $('#problem').val(),
+        tagz: $('#tags').val(),
+        expected: $('#expectation').val(),
+        result: $('#result').val(),
+        bestGuess: $('#bestGuess').val(),
+        theCode: $('#daCodez').val(),
+    })
 
+    Problem.one.insertRecord();
+    console.log('TEST')
     initProblemPosted();
 });
+
 
 function initProblemPosted() {
     //SPA "Navigation"
@@ -65,8 +91,14 @@ function initProblemPosted() {
     $("#submitted").show();
 
 
-    //  Build out page in HTML with an ID of Submitted.  No idea dog image, an option to go to Stack Overflow, and JS for a random No Can Halp line out of Rosie's list.
-    // window.location.href = "https://stackoverflow.com/questions/ask"
+    $('#stack-overflow').on('click', function () {
+        window.location.href = "https://stackoverflow.com/questions/ask"
+    })
+
+    $('#home-page').on('click', function () {
+        initMainPage();
+    })
+
 
 }
 
@@ -84,14 +116,14 @@ $('#provideHelp').on('click', function () {
 
 
 
-
-
-
-
-
-
-
-
-
-
 $(document).ready(initMainPage())
+
+
+
+
+
+///   This stuff is from Problem Methods... which is currently not referenced in our HTML
+
+Problem.loadAll = (array) => {
+    array.forEach(element => Problem.all.push(new Problem(element)))
+}
