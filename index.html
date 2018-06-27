@@ -13,29 +13,14 @@
     <link rel="stylesheet" type="text/css" href="styling/layout.css" />
     <link rel="stylesheet" type="text/css" href="styling/modules.css" />
 
-<!--  <script id="book-list-template" type="text/x-handlebars-template">
-        <book class="clearfix" data-book="{{book}}">
-          <header>
-            <h2>{{title}}</h2>
-            <isbn>{{isbn}}</isbn>
-            <div>
-              By {{author}}
-            </div>
-          </header>
-        <img src ={{image_url}} />
-        <article class="description">{{{description}}}</article>
-        </book>
-    </script>
- -->
-
-    <script id="problem-template" type="text/x-handlebars-template">
-    <problem class="clearfix">
+<script id="problem-template" type="text/x-handlebars-template">
+        <problem class="clearfix">
             <h3>The Problem:</h3>
             <p>{{question}}</p>
-            
+
             <div class="body">
               <h4>Code:</h4>
-              <p>{{code}}</p>
+              <p>{{codes}}</p>
 
               <h4>Expected Result:</h4> 
               <p>{{expectation}}</p>
@@ -45,28 +30,24 @@
               
               <h2>Best Guess: {{best_guess}}</h2>
             </div>
-
-            <button class= "solution" id='solve'>Solve It!</button>
-            <!-- <button class= "stackO" id='stackoverflow'>Solve It!</button>
-            <button class= "homePage" id='home'>Back to Homepage</button> -->
+            <button type="button">Solve This Problem</button>
         </problem>
     </script>
-
-
 </head>
 <!-- <address><a href="{{author_url}}">{{author}}</a></address> -->
+
 <body>
     <nav>
         <button class="topnav" id='getHelp'>OMG HALP</button>
-        <button class="topnav"id='provideHelp'>Here to help</button>
-        <button class="topnav"id='about'>About Us</button>
+        <button class="topnav" id='provideHelp'>Here to help</button>
+        <button class="topnav" id='about'>About Us</button>
     </nav>
 
     <!-- New Problem -->
-    <img id="animal" src="https://placehold.it/150x150"/>
+    <img id="animal" src="https://placehold.it/150x150" />
     <section id="newProblem">
         <form>
-        
+
             <textarea required class="textbox" id="problem" rows="15" cols="92" wrap="hard" placeholder="Describe your problem"></textarea>
 
             <textarea required class="textbox" id="expectation" rows="15" cols="92" wrap="hard" placeholder="What I expected to see is:"></textarea>
@@ -104,8 +85,23 @@
     </section>
 
     <!-- About Us -->
-    <section>
-        <h2>About Us</h2>
+    <section class="team" id="team">
+        <h1>Our Team</h1>
+        <span class="border"></span>
+        <div class="pics">
+            <a href="#">
+                <img src="https://scontent-iad3-1.cdninstagram.com/vp/18542badf10123f4cd73b1bca751b217/5B9806B7/t51.2885-19/s150x150/29416596_217911455429026_2330359846475399168_n.jpg"
+                    alt="luther">
+                <a href="#">
+                    <img src="https://scontent-iad3-1.cdninstagram.com/vp/18542badf10123f4cd73b1bca751b217/5B9806B7/t51.2885-19/s150x150/29416596_217911455429026_2330359846475399168_n.jpg"
+                        alt="travis">
+                    <a href="#">
+                        <img src="https://scontent-iad3-1.cdninstagram.com/vp/18542badf10123f4cd73b1bca751b217/5B9806B7/t51.2885-19/s150x150/29416596_217911455429026_2330359846475399168_n.jpg"
+                            alt="rosie">
+
+
+
+        </div>
 
     </section>
 
