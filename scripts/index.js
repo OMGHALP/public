@@ -1,15 +1,28 @@
 'use strict'
 
+//  CODE from the constructor is a reserved word.   We're gonna have to fix that at some point.   Specifically, need to change it in the constructor to problemobj.codes AND the table-header in Postgres to codes so that the two line up when pulling problems out of the database.
+
 //  Constructor for New problems
 function Problem(problemobj) {
-    this.question = problemobj.problem
-    this.tag = problemobj.tagz
-    this.expectation = problemobj.expected
-    this.result = problemobj.result
-    this.best_guess = problemobj.bestGuess
-    this.codes = problemobj.theCode
-    this.result = problemobj.result
+    this.question = problemobj.question,
+        this.expectation = problemobj.expectation,
+        this.result = problemobj.result,
+        this.best_guess = problemobj.best_guess,
+        this.codes = problemobj.code,
+        this.solved = problemobj.solved,
+        this.tag = problemobj.tag
 }
+
+// function Problem(problemobj) {
+//     this.question = problemobj.problem
+//     this.tag = problemobj.tagz
+//     this.expectation = problemobj.expected
+//     this.result = problemobj.result
+//     this.best_guess = problemobj.bestGuess
+//     this.codes = problemobj.theCode
+// }
+
+
 
 Problem.all = [];
 Problem.one = {};
@@ -48,7 +61,7 @@ function hereToHelp() {
 
     //turns on the event listeners to see what was clicked on.
     eventListeners();
-    
+
 }
 
 
@@ -68,18 +81,17 @@ $('#getHelp').on('click', function () {
     $("#animal").show();
 });
 
-
 //User clicks the PLZ HALP button
 $('#submit').on('click', function (event) {
     event.preventDefault();
     console.log(`you're trying to submit.`)
     Problem.one = new Problem({
-        problem: $('#problem').val(),
-        tagz: $('#tags').val(),
-        expected: $('#expectation').val(),
+        question: $('#problem').val(),
+        expectation: $('#expectation').val(),
         result: $('#result').val(),
-        bestGuess: $('#bestGuess').val(),
-        theCode: $('#daCodez').val(),
+        best_guess: $('#bestGuess').val(),
+        codes: $('#daCodez').val(),
+        tag: $('#tags').val(),
     })
 
     Problem.one.insertRecord();
@@ -109,7 +121,10 @@ $(document).ready(initMainPage())
 ///   This stuff is from Problem Methods... which is currently not referenced in our HTML
 
 Problem.loadAll = (array) => {
-    array.forEach(element => Problem.all.push(new Problem(element)))
+    array.forEach(element => {
+        Problem.all.push(new Problem(element))
+        console.log(element)
+    })
 }
 
 Problem.prototype.toHtml = function () {
