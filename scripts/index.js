@@ -48,7 +48,7 @@ function hereToHelp() {
 
     //turns on the event listeners to see what was clicked on.
     $('problem button').on('click', function (event) {
-        console.log($(this).parent()[0]);
+        
         event.preventDefault();
         let prob = $(this).parent().find('*')
     })
