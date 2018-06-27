@@ -12,45 +12,52 @@
     <link rel="stylesheet" type="text/css" href="styling/base.css" />
     <link rel="stylesheet" type="text/css" href="styling/layout.css" />
     <link rel="stylesheet" type="text/css" href="styling/modules.css" />
-</head>
 
+    <problem class="clearfix" data-problem="{{problem}}" data-theCode="{{theCode}}" data-result="{{result}}"
+    data-expectation="{{expectation}}"  data-bestGuess="{{bestGuess}" >
+    <script id="problem-template" type="text/x-handlebars-template">
+          <header>
+            <h1>{{problem}}</h1>
+            <div>
+              <h2>Code: {{theCode}}</h2>
+              <h2>Result: {{result}}</h2>
+              <h2>Expected: {{expectation}}</h2>
+              <h2>Best Guess: {{bestGuess}}</h2>
+            </div>
+            <button class= "solution" id='solve'>Solve It!</button>
+            <button class= "stackO" id='stackoverflow'>Solve It!</button>
+            <button class= "homePage" id='home'>Back to Homepage</button>
+          </header>
+        </problem>
+      </script>
+</head>
+<!-- <address><a href="{{author_url}}">{{author}}</a></address> -->
 <body>
     <nav>
-        <button id='getHelp'>OMG HALP</button>
-        <button id='provideHelp'>I'm here to help</button>
-        <button id='about'>About Us</button>
+        <button class="topnav" id='getHelp'>OMG HALP</button>
+        <button class="topnav"id='provideHelp'>Here to help</button>
+        <button class="topnav"id='about'>About Us</button>
     </nav>
 
     <!-- New Problem -->
-    <img id="animal" />
+    <img id="animal" src="https://placehold.it/150x150"/>
     <section id="newProblem">
         <form>
-            
-                <label for 'problem'>Describe your problem</label>
-            <textarea class="textbox" id="problem" rows="15" cols="92">
-            </textarea>
+        
+            <textarea required class="textbox" id="problem" rows="15" cols="92" wrap="hard" placeholder="Describe your problem"></textarea>
 
-            <textarea required class="textbox" id="expectation" rows="15" cols="92" wrap="hard" placeholder="Describe your problem">
-            What I expected to see is:
-            </textarea>
+            <textarea required class="textbox" id="expectation" rows="15" cols="92" wrap="hard" placeholder="What I expected to see is:"></textarea>
 
-            <textarea required class="textbox" id="result" rows="15" cols="92" wrap="hard" placeholder="Describe your problem">
-            What I actually got is:
-            </textarea>
+            <textarea required class="textbox" id="result" rows="15" cols="92" wrap="hard" placeholder="What I actually got is:"></textarea>
 
-            <textarea required class="textbox" id="bestGuess" rows="15" cols="92" wrap="hard" placeholder="Describe your problem">
-            What I think might be the issue is:
-            </textarea>
+            <textarea required class="textbox" id="bestGuess" rows="15" cols="92" wrap="hard" placeholder="What I think might be the issue is:"></textarea>
 
 
-            <textarea required class="textbox" id="daCodez" rows="15" cols="92" wrap="hard" placeholder="Describe your problem">
-            My code is:
-            </textarea>
+            <textarea required class="textbox" id="theCode" rows="15" cols="92" wrap="hard" placeholder="My code is:"></textarea>
 
 
-            <label for 'tagz'>Use commas to seperate tags (5 max)</label>
-
-            <input type="text" , name='tagz' , size=50 />
+            <label for 'tagz' id="tags">Use commas to seperate tags (5 max)</label>
+            <input id="tags" type="text" size=50 />
 
             <button id="submit">HALP</button>
         </form>
@@ -65,9 +72,7 @@
     <section id=solveAProblem>
         <h2>Solve a Problem!</h2>
         <textarea class="textbox" id="reply" rows="15" cols="92">
-
         What's causing your problem is:
-
 
         Your fixed code might look like:
 
@@ -83,10 +88,6 @@
 
     <footer>&copy;2018 OMG HALP Team. All Rights Reserved</footer>
 
-
-    <footer>&copy;2018 OMG HALP Team. All Rights Reserved</footer>
-
-
     <!-- J query -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -94,7 +95,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
 
     <!-- Routes -->
-
     <script src="scripts/index.js"></script>
     <script src="scripts/routes.js"></script>
 
