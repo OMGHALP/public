@@ -95,13 +95,20 @@ function goSolveProblem() {
 //User clicks on Get Help
 $('#getHelp').on('click', function () {
     //  SPA navigation
-    // $('#newProblem').empty();
     $("section").hide();
     $('#newProblem').show();
     $("#animal").show();
     $("#reply").hide();
     $('#treadmillgif').hide();
     $('#edit').hide();
+    $('#submit').show();
+    $("#problem").val('');
+    $("#expectation").val('');
+    $("#result").val('');
+    $("#bestGuess").val('');
+    $("#theCode").val('');
+    $("#reply").val('');
+    $("#tags").val('');
 });
 
 //User clicks the PLZ HALP button
@@ -132,19 +139,30 @@ function initProblemPosted() {
     })
 }
 
-$('#edit').on('click', function () {
+$('#edit').on('click', function (event) {
+    //user Edits a problem
     event.preventDefault();
-    Problem.one = new Problem({
-        question: $('#problem').val(),
-        expectation: $('#expectation').val(),
-        result: $('#result').val(),
-        best_guess: $('#bestGuess').val(),
-        codes: $('#daCodez').val(),
-        tag: $('#tags').val(),
-    })
+    
+    //  Reassign properties of Problem 1 OBJ
+    Problem.one.question = $('#problem').val();
+    Problem.one.expectation = $('#expectation').val();
+    Problem.one.result = $('#result').val();
+    Problem.one.best_guess = $('#bestGuess').val();
+    Problem.one.code = $('#theCode').val();
+    Problem.one.tags = $('#tags').val();
+    Problem.one.solved = $("#reply").val();
+    
 
-    Problem.one.insertRecord();
+    Problem.one.updateRecord();
     initProblemPosted();
+})
+
+$('#about').on('click', () => {
+    // user clicks the about us 
+    $('section').hide();
+    $("#animal").hide();
+    $('#team').show();
+    $('#treadmillgif').hide();
 })
     
 $(document).ready(initMainPage())
