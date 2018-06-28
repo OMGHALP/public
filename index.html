@@ -41,20 +41,22 @@
               <p class=best_guess>{{best_guess}}</p>
 
               <h4>Solution:</h4>
-              <p class=best_guess>{{solved}}</p>
+              <p class=solution>{{solved}}</p>
             </div>
-            <button>Solve This Problem</button>
+            <button>Edit This Problem</button>
         </problem>
     </script>
 </head>
-<!-- <address><a href="{{author_url}}">{{author}}</a></address> -->
 
 <body>
     <nav>
         <button class="topnav" id='getHelp'>OMG HALP</button>
-        <button class="topnav" id='provideHelp'>Here to help</button>
+        <button class="topnav" id='provideHelp'>I'm Here to Help</button>
         <button class="topnav" id='about'>About Us</button>
     </nav>
+
+    <!-- Opening Gif -->
+    <img id=treadmillgif src = "./images/puppiesonatreadmill.gif" />
 
     <!-- New Problem -->
     <img id="animal" src="https://placehold.it/150x150" />
@@ -72,18 +74,17 @@
 
             <textarea required class="textbox" id="theCode" wrap="hard" placeholder="My code is:"></textarea>
 
-            <textarea class="textbox" id="reply"  placeholder="What's causing your problem is:
-Your fixed code might look like:
-I need more information to help you.  The specific things I want to know are:">
+            <textarea class="textbox" id="reply"  placeholder="Solution:  Be specific!  Ideally, identify what's causing the problem, as well as how to fix it.">
                 
              </textarea>
 
 
-            <label for 'tagz' id="tags">Use commas to seperate tags (5 max)</label>
+            <label for 'tagz'>Use commas to seperate tags (5 max)</label>
             <input id="tags" type="text" size=50 />
 
 
             <button id="submit">HALP</button>
+            <button id="edit">Save Changes</button>
         </form>
     </section>
 
