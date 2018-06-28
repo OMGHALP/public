@@ -1,5 +1,7 @@
 'use strict'
 
+
+//   Heroku URL  https://omg-halp-project.herokuapp.com
 Problem.prototype.insertRecord = function (callback) {
     $.post('http://127.0.0.1:3000/question', {
         question: this.question,
@@ -14,7 +16,7 @@ Problem.prototype.insertRecord = function (callback) {
 }
 
 Problem.fetchAll = callback => {
-    $.get('https://omg-halp-project.herokuapp.com/problem')
+    $.get('http://127.0.0.1:3000/problem')
         .then(results => {
             Problem.loadAll(results);
             callback();

@@ -11,6 +11,8 @@ text-align:    center;
 text-shadow:   1vw 1pvw #000000;
 margin-top: 5px;
 margin-bottom: 5px;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-weight: 300;
 }
 
 button:hover {
@@ -26,6 +28,11 @@ button:hover {
     float: center;
 }
 
+#problem-template {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
 #browseProblems {
     display: inline;
     margin: auto;
@@ -35,6 +42,17 @@ button:hover {
     align-content: center;
 }
 
+#landing {
+    display: block;
+    height: 70%;
+    text-align: center;
+    object-position: 50% 0;
+    width: 100%;
+    margin: 0;
+    font-size: 3rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
 img {
     display: block;
     width: 450px;
@@ -42,9 +60,10 @@ img {
     object-position: 50% 50;
     align-content: center;
     text-align: center;
-    margin-left: 25%;
+    margin-left: 35%;
     padding-bottom: 40px;
 }
+
 
 #tags {
     display: block;
@@ -62,6 +81,23 @@ img {
     display: block;
 }
 
+textarea {
+    border: 1px solid #EEEEEE;
+    box-shadow: 1px 1px 0 #DDDDDD;
+    display: block;
+    font-family: 'Marck Script',cursive;
+    font-size: 22px;
+    line-height: 50px;
+    margin: 2% auto;
+    padding: 11px 20px 0 70px;
+    resize: none;
+    height: 689px;
+    width: 530px;
+    background-color: cadetblue;
+    -webkit-background-size:  100% 50px;
+    background-size: 100% 30px;
+}
+
 
 /*This is for tablets*/
 @media only screen and (max-width: 768px) {
@@ -73,7 +109,25 @@ img {
         width: 50%;
         padding-bottom: 30px;
     }
+
+    textarea {
+        border: 1px solid #EEEEEE;
+        box-shadow: 1px 1px 0 #DDDDDD;
+        display: block;
+        font-family: 'Marck Script',cursive;
+        font-size: 22px;
+        line-height: 50px;
+        margin: 2% auto;
+        padding: 11px 20px 0 70px;
+        resize: none;
+        height: 689px;
+        width: 100%;
+        background-color: cadetblue;
+        -webkit-background-size:  100% 50px;
+        background-size: 100% 30px;
+    }
 }
+
 
 /*This is for smartphones*/
 
@@ -86,5 +140,22 @@ img {
         width: 100%;
         margin: 0;
         padding-bottom: 10px;
+    }
+
+    textarea {
+        border: 1px solid #EEEEEE;
+        box-shadow: 1px 1px 0 #DDDDDD;
+        display: block;
+        font-family: 'Marck Script',cursive;
+        font-size: 22px;
+        line-height: 50px;
+        margin: 2% auto;
+        padding: 11px 20px 0 70px;
+        resize: none;
+        height: 689px;
+        width: 100%;
+        background-color: cadetblue;
+        -webkit-background-size:  100% 50px;
+        background-size: 100% 30px;
     }
 }

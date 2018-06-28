@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 //  CODE from the constructor is a reserved word.   We're gonna have to fix that at some point.   Specifically, need to change it in the constructor to problemobj.codes AND the table-header in Postgres to codes so that the two line up when pulling problems out of the database.  Ditto with the object literal currently at line 63
 
@@ -11,7 +11,7 @@ function Problem(problemobj) {
         this.codes = problemobj.code,
         this.solved = problemobj.solved,
         this.tag = problemobj.tag,
-        this.id = problemobj.problem_id
+        this.id = problemobj.problem_id;
     
 }
 
@@ -28,7 +28,7 @@ function initMainPage() {
     $.ajax("https://dog.ceo/api/breeds/image/random")
         .then((results) => {
             $('#animal').attr('src', `${results.message}`);
-        })
+        });
 }
 
 $('#provideHelp').on('click', function () {
@@ -42,13 +42,13 @@ $('#provideHelp').on('click', function () {
 
     //Fetches the problems and loads them into Problem.all  Then automatically calls hereToHelp once Problem.all is loaded with problem objects
     Problem.all = [];
-    Problem.fetchAll(hereToHelp)
-})
+    Problem.fetchAll(hereToHelp);
+});
 
 function hereToHelp() {
     Problem.all.forEach(prob => {
-        $('#browseProblems').append(prob.toHtml())
-    })
+        $('#browseProblems').append(prob.toHtml());
+    });
 
     //turns on the event listeners to see which of the problems was clicked on.
     $('problem button').on('click', function (event) {
@@ -69,8 +69,8 @@ function hereToHelp() {
 
         //Now that we have our problem object, it's time to "leave" this page and head for the edit the problem page
 
-        goSolveProblem()
-    })
+        goSolveProblem();
+    });
 }
 
 function goSolveProblem() {
@@ -95,13 +95,20 @@ function goSolveProblem() {
 //User clicks on Get Help
 $('#getHelp').on('click', function () {
     //  SPA navigation
-    // $('#newProblem').empty();
     $("section").hide();
     $('#newProblem').show();
     $("#animal").show();
     $("#reply").hide();
     $('#treadmillgif').hide();
     $('#edit').hide();
+    $('#submit').show();
+    $("#problem").val('');
+    $("#expectation").val('');
+    $("#result").val('');
+    $("#bestGuess").val('');
+    $("#theCode").val('');
+    $("#reply").val('');
+    $("#tags").val('');
 });
 
 //User clicks the PLZ HALP button
@@ -114,7 +121,7 @@ $('#submit').on('click', function (event) {
         best_guess: $('#bestGuess').val(),
         codes: $('#daCodez').val(),
         tag: $('#tags').val(),
-    })
+    });
 
     Problem.one.insertRecord();
     initProblemPosted();
@@ -129,10 +136,10 @@ function initProblemPosted() {
 
     $('#home-page').on('click', function () {
         initMainPage();
-    })
+    });
 }
 
-$('#edit').on('click', function () {
+$('#edit').on('click', function (event) {
     event.preventDefault();
     Problem.one = new Problem({
         question: $('#problem').val(),
@@ -141,23 +148,32 @@ $('#edit').on('click', function () {
         best_guess: $('#bestGuess').val(),
         codes: $('#daCodez').val(),
         tag: $('#tags').val(),
-    })
+    });
 
     Problem.one.insertRecord();
     initProblemPosted();
-})
+});
+
+$('#about').on('click', () => {
+    // user clicks the about us 
+
+    $('section').hide();
+    $("#animal").hide();
+    $('#team').show();
+    $('#treadmillgif').hide();
+});
     
-$(document).ready(initMainPage())
+$(document).ready(initMainPage());
 
 ///   This stuff is from Problem Methods... which is currently not referenced in our HTML
 
 Problem.loadAll = (array) => {
     array.forEach(element => {
-        Problem.all.push(new Problem(element))
-    })
-}
+        Problem.all.push(new Problem(element));
+    });
+};
 
 Problem.prototype.toHtml = function () {
     let template = Handlebars.compile($('#problem-template').text());
     return template(this);
-}
+};

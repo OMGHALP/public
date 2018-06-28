@@ -3,6 +3,14 @@
     color: black;
 }
 
+#newProblem {
+    width: 80%;
+    height: 60%;
+    margin-left: 10%;
+    margin-right:10%;
+    font-size: 2rem;
+}
+
 nav {
 overflow: hidden;
 background-color: #ffffff;
@@ -33,12 +41,18 @@ nav.topnav {
         align-items: center;
         align-content: center;
         text-align: center;
-        }
+        size
+    }
 
     nav.topnav {
         display: inline;
     } 
     
+    #newProblem {
+        width: 100%;
+        height: 70%;
+        font-size: 1rem;
+    }
 }
 
 /*This is for smartphones*/
@@ -61,4 +75,10 @@ nav.topnav {
     nav.topnav {
         display: inline;
     } 
+
+    #newProblem {
+        width: 100%;
+        height: 70%;
+        font-size: 1rem;
+    }
 }

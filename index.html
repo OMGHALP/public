@@ -13,6 +13,9 @@
     <link rel="stylesheet" type="text/css" href="styling/layout.css" />
     <link rel="stylesheet" type="text/css" href="styling/modules.css" />
 
+<div id="backdrop"></div>
+
+
 <script id="problem-template" type="text/x-handlebars-template">
         <problem class="clearfix"  >
             <h3 id={{id}}>The Problem:</h3>
@@ -32,23 +35,24 @@
               <p class=best_guess>{{best_guess}}</p>
 
               <h4>Solution:</h4>
-              <p class=best_guess>{{solved}}</p>
+              <p class=solution>{{solved}}</p>
             </div>
-            <button>Solve This Problem</button>
+            <button>Edit This Problem</button>
         </problem>
     </script>
 </head>
-<!-- <address><a href="{{author_url}}">{{author}}</a></address> -->
 
 <body>
     <nav>
         <button class="topnav" id='getHelp'>OMG HALP</button>
-        <button class="topnav" id='provideHelp'>Here to help</button>
+        <button class="topnav" id='provideHelp'>I'm here to help</button>
         <button class="topnav" id='about'>About Us</button>
     </nav>
 
     <!-- Opening Gif -->
-    <img id=treadmillgif src = "./images/puppiesonatreadmill.gif" />
+    <div id="landing">
+    <img id="treadmillgif" src = "./images/puppiesonatreadmill.gif" />
+    Going nowhere?</div>
 
     <!-- New Problem -->
     <img id="animal" src="https://placehold.it/150x150" />
