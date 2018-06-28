@@ -14,8 +14,8 @@
     <link rel="stylesheet" type="text/css" href="styling/modules.css" />
 
 <script id="problem-template" type="text/x-handlebars-template">
-        <problem class="clearfix">
-            <h3>The Problem:</h3>
+        <problem class="clearfix"  >
+            <h3 id={{id}}>The Problem:</h3>
             <p>{{question}}</p>
 
             <div class="body">
@@ -30,6 +30,9 @@
               
               <h4>Best Guess:</h4>
               <p class=best_guess>{{best_guess}}</p>
+
+              <h4>Solution:</h4>
+              <p class=best_guess>{{solved}}</p>
             </div>
             <button>Solve This Problem</button>
         </problem>
@@ -49,20 +52,27 @@
     <section id="newProblem">
         <form>
 
-            <textarea required class="textbox" id="problem" rows="15" cols="92" wrap="hard" placeholder="Describe your problem"></textarea>
+            <textarea required class="textbox" id="problem" wrap="hard" placeholder="Describe your problem"></textarea>
 
-            <textarea required class="textbox" id="expectation" rows="15" cols="92" wrap="hard" placeholder="What I expected to see is:"></textarea>
+            <textarea required class="textbox" id="expectation" wrap="hard" placeholder="What I expected to see is:"></textarea>
 
-            <textarea required class="textbox" id="result" rows="15" cols="92" wrap="hard" placeholder="What I actually got is:"></textarea>
+            <textarea required class="textbox" id="result" wrap="hard" placeholder="What I actually got is:"></textarea>
 
-            <textarea required class="textbox" id="bestGuess" rows="15" cols="92" wrap="hard" placeholder="What I think might be the issue is:"></textarea>
+            <textarea required class="textbox" id="bestGuess" wrap="hard" placeholder="What I think might be the issue is:"></textarea>
 
 
-            <textarea required class="textbox" id="theCode" rows="15" cols="92" wrap="hard" placeholder="My code is:"></textarea>
+            <textarea required class="textbox" id="theCode" wrap="hard" placeholder="My code is:"></textarea>
+
+            <textarea class="textbox" id="reply"  placeholder="What's causing your problem is:
+Your fixed code might look like:
+I need more information to help you.  The specific things I want to know are:">
+                
+             </textarea>
 
 
             <label for 'tagz' id="tags">Use commas to seperate tags (5 max)</label>
             <input id="tags" type="text" size=50 />
+
 
             <button id="submit">HALP</button>
         </form>
@@ -73,17 +83,6 @@
         <h2>Previously Submitted Problems</h2>
     </section>
 
-    <!-- Submit a New Solution -->
-    <section id=solveAProblem>
-        <h2>Solve a Problem!</h2>
-        <textarea class="textbox" id="reply" rows="15" cols="92">
-        What's causing your problem is:
-
-        Your fixed code might look like:
-
-        I need more information to help you.  The specific things I want to know are:
-     </textarea>
-    </section>
 
     <!-- About Us -->
     <section class="team" id="team">
