@@ -8,15 +8,16 @@
     <title>Document</title>
 
 
-    <link rel="stylesheet" type="text/css" href="styling/reset.css" />
-    <link rel="stylesheet" type="text/css" href="styling/base.css" />
-    <link rel="stylesheet" type="text/css" href="styling/layout.css" />
-    <link rel="stylesheet" type="text/css" href="styling/modules.css" />
-    <link rel="stylesheet" type="text/css" href="styling/heretohelp.css" />
+    <link rel="stylesheet" type="text/css" href="styling/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="styling/base.css"/>
+    <link rel="stylesheet" type="text/css" href="styling/layout.css"/>
+    <link rel="stylesheet" type="text/css" href="styling/modules.css"/>
+    <link rel="stylesheet" type="text/css" href="styling/heretohelp.css"/>
+    <link rel="stylesheet" type="text/css" href="styling/team.css"/>
     <link href="https://fonts.googleapis.com/css?family=Graduate|Passion+One|Questrial" rel="stylesheet">
 
 <script id="problem-template" type="text/x-handlebars-template">
-        <problem class="clearfix"  >
+        <problem class="clearfix">
             <h3 id={{id}}>The Problem:</h3>
             <p>{{question}}</p>
 
@@ -91,22 +92,44 @@
 
 
     <!-- About Us -->
-    <section class="team" id="team">
-        <h1>Our Team</h1>
-        <span class="border"></span>
-        <div class="pics">
-            <a href="#">
-                <img src="https://scontent-iad3-1.cdninstagram.com/vp/18542badf10123f4cd73b1bca751b217/5B9806B7/t51.2885-19/s150x150/29416596_217911455429026_2330359846475399168_n.jpg"
-                    alt="luther">
-                <a href="#">
-                    <img src="https://scontent-iad3-1.cdninstagram.com/vp/18542badf10123f4cd73b1bca751b217/5B9806B7/t51.2885-19/s150x150/29416596_217911455429026_2330359846475399168_n.jpg"
-                        alt="travis">
-                    <a href="#">
-                        <img src="https://scontent-iad3-1.cdninstagram.com/vp/18542badf10123f4cd73b1bca751b217/5B9806B7/t51.2885-19/s150x150/29416596_217911455429026_2330359846475399168_n.jpg"
-                            alt="rosie">
-        </div>
+    <section class="team-section" id="team">
+		<h1>Our Team</h1>
+		<span class="border"></span>
+		<div class="ps">
+			<a href="#p1">
+				<img src="https://scontent-iad3-1.cdninstagram.com/vp/18542badf10123f4cd73b1bca751b217/5B9806B7/t51.2885-19/s150x150/29416596_217911455429026_2330359846475399168_n.jpg"
+				 alt="luther">
+				<a href="#p2">
+					<img src="https://files.slack.com/files-pri/T039KG69K-FBEG23X4H/20180627_101014.jpg" alt="rosie">
+					<a href="#p3">
+						<img src="https://files.slack.com/files-pri/T039KG69K-FBGK69B8V/00100dportrait_00100_burst20180629083707291_cover.jpg" alt="travis">
+		</div>
 
-    </section>
+		<div class="sectioner" id="p1">
+			<span class="name">Luther</span>
+			<span class="border"></span>
+			<p>
+				Hey I’m from Florida and I love EDM and beaches, and in my free time I like to work out, explore as many places as possible, and I am a avid movie connoisseur.
+			</p>
+		</div>
+
+		<div class="sectioner" id="p2">
+			<span class="name">Rosie</span>
+			<span class="border"></span>
+			<p>
+				My name is Rosie and I am a transplant to the Seattle area. I have spent most of my life working with technology as a hobby and decided to switch careers and work with what I already loved. In my previous career I was a teacher. Now I look forward to working in the tech sector ensuring the development and delivery of products that shape our world.
+			</p>
+		</div>
+
+		<div class="sectioner" id="p3">
+			<span class="name">Travis</span>
+			<span class="border"></span>
+			<p>
+				Hey Y'all, My name's Travis. I've got a background in math and physics, a foreground in software engineering, and an AWESOME picture.  I'm a huge believer in the value of using Tech to solve problems, and improve lives
+			</p>
+		</div>
+
+	</section>
 
     <footer>&copy;2018 OMG HALP Team. All Rights Reserved</footer>
 
