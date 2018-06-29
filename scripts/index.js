@@ -22,7 +22,7 @@ function initMainPage() {
     //  Hides the Sections for SPA Compliance
     $("section").hide();
     $('#animal').hide();
-    $('#treadmillgif').show();
+    $('#landing').show();
  
   // Hits the dog.ceo API, gets a random dog pic, and renders it to the page
   $.ajax("https://dog.ceo/api/breeds/image/random")
@@ -35,7 +35,7 @@ $('#provideHelp').on('click', function () {
 
     //  User Clicks I'm Here to Help
     // SPA
-    $('#treadmillgif').hide();
+    $('#landing').hide();
     $("section").hide();
     $("#animal").hide();
     $("#browseProblems").empty().append("<h2>Previously Submitted Problems</h2>");
@@ -101,7 +101,7 @@ $('#getHelp').on('click', function () {
     $('#newProblem').show();
     $("#animal").show();
     $("#reply").hide();
-    $('#treadmillgif').hide();
+    $('#landing').hide();
     $('#edit').hide();
     $('#submit').show();
     $("#problem").val('');
@@ -165,7 +165,7 @@ $('#about').on('click', () => {
     $('section').hide();
     $("#animal").hide();
     $('#team').show();
-    $('#treadmillgif').hide();
+    $('#landing').hide();
 })
     
 $(document).ready(initMainPage())

@@ -17,6 +17,22 @@ text-align: center;
 
 nav.topnav {
     display: inline;
+    border-right: 5px;
+} 
+
+#submit {
+    margin-left: 45%;
+    vertical-align: sub;
+} 
+
+#edit {
+    margin: 0;
+    padding-bottom: 40px;
+    object-position: 50% 50;
+    float: center;
+    width: 100%;
+    align-items: center;
+    text-align: center;
 } 
 
 /*This is for tablets*/
@@ -39,6 +55,19 @@ nav.topnav {
         display: inline;
     } 
     
+    #submit {
+        margin-left: 45%;
+        vertical-align: sub;
+    } 
+    
+    #edit {
+        margin: 0;
+        object-position: 50% 50;
+        float: center;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    } 
 }
 
 /*This is for smartphones*/
@@ -60,5 +89,19 @@ nav.topnav {
     
     nav.topnav {
         display: inline;
+    } 
+
+    #submit {
+        margin-left: 45%;
+        vertical-align: sub;
+    } 
+    
+    #edit {
+        margin: 0;
+        object-position: 50% 50;
+        float: center;
+        width: 100%;
+        align-items: center;
+        text-align: center;
     } 
 }
