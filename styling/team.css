@@ -1,72 +1,86 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  }
+
+  #team
+  {
+    background-color: black;
+  color: white
+  }
+
+  .team-section{
+    overflow: hidden;
+    text-align: center;
+    background-color: black;
+    color: white
+    padding: 60px;
+  }
+  .team-section h1 {
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    color: white;
+    font-size: 40px
+  }
+
+  .ps {
+    margin-bottom: 40px;
     }
-    
-    .team-section{
-      overflow: hidden;
-      text-align: center;
-      background-color: black;
-      padding: 60px;
-    }
-    
-    .team-section h1 {
-      text-transform: uppercase;
-      margin-bottom: 60px;
-      color: white;
-      font-size: 40px
-    }
-    
-    .border {
-      display: block;
-      margin: auto;
+    .ps a {
+      display: inline-block;
+      margin: 0 30px;
       width: 160px;
-      height: 3px;
-      background: #3498db;
-      margin-bottom: 40px;
-    }
-    
-    .ps {
-      margin-bottom: 40px;
-      }
-    
-      .ps a {
-        display: inline-block;
-        margin: 0 30px;
-        width: 160px;
-        height: 160px;
-        overflow: hidden;
-        border-radius: 50%;
-        }
-    
-      .ps a img {
-        width: 100%;
-        filter: grayscale(100%);
-        transition: 0.3 all;
-      }
-    
-      .ps a:hover > img{
-        filter: none;
-        }
-    
-    .sectioner {
-      width: 600px;
-      margin: auto;
-      font-size: 20px;
-      color: white;
-      text-align: justify;
-      height: 0;
+      height: 160px;
       overflow: hidden;
+      border-radius: 50%;
+      }
+    .ps a img {
+      width: 100%;
+      filter: grayscale(100%);
+      transition: 0.3 all;
     }
-    .sectioner:target{
-      height: auto;
-    }
-    
-    .name {
-      display: block;
-      margin-bottom: 30px;
-      text-align: center;
-      text-transform: uppercase;
-      font-size: 22px;
-    }
+    .ps a:hover > img{
+      filter: none;
+      }
+  .sectioner {
+    width: 70vw;
+    margin: auto;
+    font-size: 20px;
+    color: white;
+    height: 0;
+    overflow: hidden;
+  }
+  .sectioner:target{
+    height: auto;
+  }
+  #team a {
+    text-decoration: none;
+  }
+
+  #team *{
+    background-color: black;
+    color: white;
+  }
+  .name {
+    display: block;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 22px;
+  }
+  
+  #team {
+    height: 90vh;
+  }
+
+
+  span {
+    display: block;
+    margin: auto;
+    width: 160px;
+    height: 3px;
+    background: #3498db;
+    color: #3498db;
+    margin-bottom: 40px;
+  }
