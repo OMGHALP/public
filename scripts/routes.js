@@ -9,7 +9,7 @@ Problem.prototype.insertRecord = function (callback) {
         expectation: this.expectation,
         result: this.result,
         best_guess: this.best_guess,
-        code: this.code,
+        codes: this.codes,
     })
         .then(console.log)
         .then(callback);
@@ -34,9 +34,10 @@ Problem.prototype.updateRecord = function (callback) {
                 tag: this.tag,
                 expectation: this.expectation,
                 best_guess: this.best_guess,
-                code: this.code,
+                codes: this.codes,
                 result: this.result,
-                problem_id: this.id
+                problem_id: this.id,
+                solution: this.solution
             }
     })
         .then(console.log)

@@ -1,15 +1,13 @@
 'use strict'
 
-//  CODE from the constructor is a reserved word.   We're gonna have to fix that at some point.   Specifically, need to change it in the constructor to problemobj.codes AND the table-header in Postgres to codes so that the two line up when pulling problems out of the database.  Ditto with the object literal currently at line 63
-
 //  Constructor for New problems
 function Problem(problemobj) {
     this.question = problemobj.question,
         this.expectation = problemobj.expectation,
         this.result = problemobj.result,
         this.best_guess = problemobj.best_guess,
-        this.codes = problemobj.code,
-        this.solved = problemobj.solved,
+        this.codes = problemobj.codes,
+        this.solution = problemobj.solution,
         this.tag = problemobj.tag,
         this.id = problemobj.problem_id
 }
@@ -62,8 +60,8 @@ function hereToHelp() {
             expectation: prob[6].innerText,
             result: prob[8].innerText,
             best_guess: prob[10].innerText,
-            code: prob[4].innerText,
-            solved: prob[12].innerText,
+            codes: prob[4].innerText,
+            solution: prob[12].innerText,
             tag: `ans`,
             problem_id: prob[0].id
         });
@@ -88,8 +86,8 @@ function goSolveProblem() {
     $("#expectation").val(Problem.one.expectation);
     $("#result").val(Problem.one.result);
     $("#bestGuess").val(Problem.one.best_guess);
-    $("#theCode").val(Problem.one.code);
-    $("#reply").val(Problem.one.solved);
+    $("#theCode").val(Problem.one.codes);
+    $("#reply").val(Problem.one.solution);
     $("#tags").val(Problem.one.tag);   
 }
 
@@ -151,9 +149,9 @@ $('#edit').on('click', function (event) {
     Problem.one.expectation = $('#expectation').val();
     Problem.one.result = $('#result').val();
     Problem.one.best_guess = $('#bestGuess').val();
-    Problem.one.code = $('#theCode').val();
-    Problem.one.tags = $('#tags').val();
-    Problem.one.solved = $("#reply").val();
+    Problem.one.codes = $('#theCode').val();
+    Problem.one.tag = $('#tags').val();
+    Problem.one.solution = $("#reply").val();
     
 
     Problem.one.updateRecord();

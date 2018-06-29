@@ -1,0 +1,30 @@
+#browseProblems h2{
+    font-family: 'Passion One', cursive;
+    margin: 0, auto;
+    text-align: center;
+    font-size: 2rem;
+}
+
+#browseProblems h3{
+    font-family: 'Questrial', sans-serif;
+    margin-top: 1.5rem;
+    font-size: 1.7rem;
+}
+
+#browseProblems h4{
+    font-family: 'Questrial', sans-serif;
+    margin-top: 1.3rem;
+    font-size: 1.5rem;
+}
+
+#browseProblems p{
+    font-size: 1.5rem;
+}
+
+#browseProblems button{
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+}
+
+
+
