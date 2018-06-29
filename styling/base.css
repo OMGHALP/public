@@ -24,6 +24,10 @@ nav.topnav {
     border-right: 5px;
 } 
 
+.sectioner {
+    margin-bottom:30px;
+}
+
 #submit {
     margin-left: 45%;
     vertical-align: sub;
