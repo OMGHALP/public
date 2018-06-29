@@ -71,7 +71,7 @@
   }
   
   #team {
-    height: 90vh;
+    height: 100vh;
   }
 
 
@@ -84,3 +84,7 @@
     color: #3498db;
     margin-bottom: 40px;
   }
+
+  /*This is for smartphones*/
+
+

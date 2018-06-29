@@ -73,6 +73,11 @@ button:hover {
     display: block;
 }
 
+#ruff {
+font-family: 'Reenie Beanie', cursive;
+text-align: center;
+font-size: 4rem;
+}
 
 /*This is for tablets*/
 @media only screen and (max-width: 768px) {
@@ -103,7 +108,7 @@ button:hover {
 @media only screen and (min-width: 120px) and (max-width: 450px){
     #animal {
         display: block;
-        height: 70%;
+        height: auto;
         text-align: center;
         object-position: 50% 0;
         width: 100%;
