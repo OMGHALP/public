@@ -12,7 +12,9 @@
     <link rel="stylesheet" type="text/css" href="styling/base.css" />
     <link rel="stylesheet" type="text/css" href="styling/layout.css" />
     <link rel="stylesheet" type="text/css" href="styling/modules.css" />
- 
+    <link rel="stylesheet" type="text/css" href="styling/heretohelp.css" />
+    <link href="https://fonts.googleapis.com/css?family=Graduate|Passion+One|Questrial" rel="stylesheet">
+
 <script id="problem-template" type="text/x-handlebars-template">
         <problem class="clearfix"  >
             <h3 id={{id}}>The Problem:</h3>
@@ -32,7 +34,7 @@
               <p class=best_guess>{{best_guess}}</p>
 
               <h4>Solution:</h4>
-              <p class=solution>{{solved}}</p>
+              <p class=solution>{{solution}}</p>
             </div>
             <button>Edit This Problem</button>
         </problem>
@@ -72,7 +74,7 @@
                 
              </textarea>
 
-
+             <br>
             <label for 'tagz'>Use commas to separate tags (5 max)</label>
             <input id="tags" type="text" placeholder="tags go here"/>
 

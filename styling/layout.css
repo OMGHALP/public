@@ -35,15 +35,17 @@ padding-bottom: 2%;
     height: 100vh;
 }
 
+footspot{
+    min-height:100%;
+    position:relative;
+}
 
 footer {
-    position: relative;
+    position: fixed;
     width: 100%;
     right: 0;
     bottom: 0;
     left: 0;
-    margin-top: 40px;
-    padding: 1rem;
     background-color: #efefef;
     text-align: center;
 }
